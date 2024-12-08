@@ -21,7 +21,7 @@ class _MyAppState extends State<MyApp> {
   void genPassword() async {
     try {
       final key = await _flutterPasswordGeneratorPlugin.generatePassword();
-      print(key);
+      print('pw: ${key}');
     } catch (e) {
       print(e);
     }

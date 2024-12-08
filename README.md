@@ -11,7 +11,7 @@ Android >= 26
 ## Installation
 
 ```sh
-flutter pub add flutter-password-generator
+flutter pub add flutter_password_generator
 ```
 
 ## Usage
@@ -23,7 +23,7 @@ import 'package:flutter_chacha20_poly1305/flutter_chacha20_poly1305.dart';
 final _flutterPasswordGeneratorPlugin = FlutterPasswordGenerator(length: 24);
 final key = await _flutterPasswordGeneratorPlugin.generatePassword();
 print('Generated password: ${pwd}');
-// Generated password: 5vQmLQsBm)=5D8DJNe>r>()w
+// Generated password: {password: 8M:a[1>]8oXFCyPF2xa0BrM], strength: strong}
 ```
 
 ## Methods

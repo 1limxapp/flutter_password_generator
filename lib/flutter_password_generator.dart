@@ -22,7 +22,7 @@ class FlutterPasswordGenerator {
     return FlutterPasswordGeneratorPlatform.instance.generateSecureRandomData();
   }
 
-  Future<String> generatePassword() async {
+  Future<Map> generatePassword() async {
     final lc = "abcdefghijklmnopqrstuvwxyz";
     final uc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     final sym = "!@#\$%^&*()_+-=[]{}|;:,.<>/?";
@@ -53,10 +53,20 @@ class FlutterPasswordGenerator {
     final strongPassword = RegExp(r'(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})');
     final mediumPassword = RegExp(r'((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{6,}))|((?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])(?=.{8,}))');
 
-    if (strongPassword.hasMatch(pwd)) return pwd;
-    if (mediumPassword.hasMatch(pwd)) return pwd;
+    var map = Map();
 
-    return pwd;
+    if (strongPassword.hasMatch(pwd)) {
+      map['password'] = pwd;
+      map['strength'] = "strong";
+    } else if (mediumPassword.hasMatch(pwd)) {
+      map['password'] = pwd;
+      map['strength'] = "medium";
+    } else {
+      map['password'] = pwd;
+      map['strength'] = "weak";
+    }
+
+    return map;
   }
 
   Future<double> secureRandom() async {
