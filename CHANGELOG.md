@@ -1,3 +1,3 @@
-## 0.0.1
+## 1.0.0
 
-* TODO: Describe initial release.
+* flutter_password_generator first version: Generate strong passwords for flutter applications based on secure, random and unique data created in native without dependencies 

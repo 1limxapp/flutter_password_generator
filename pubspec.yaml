@@ -1,7 +1,7 @@
 name: flutter_password_generator
 description: Generate strong passwords for flutter applications based on secure, random and unique data created in native without dependencies
 version: 1.0.0
-homepage:
+homepage: https://github.com/1limxapp/flutter-password-generator
 
 environment:
   sdk: '>=3.1.5 <4.0.0'
@@ -39,6 +39,13 @@ flutter:
         pluginClass: FlutterPasswordGeneratorPlugin
       ios:
         pluginClass: FlutterPasswordGeneratorPlugin
+
+topics:
+  - password-generator
+  - password-manager
+  - password
+  - password-strength
+  - password-safety
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
