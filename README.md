@@ -28,17 +28,17 @@ print('Generated password: ${pwd}');
 
 ## Methods
 
-#### `generatePassword(passwordConfig): Promise<String>`
-if no passwordConfig object is passed, it'll use the default config object:
+#### `generatePassword(): <String>`
+if no passwordConfig object is passed when init FlutterPasswordGenerator(password_config);, it'll use the default config object:
 
 ```js
-{
+(
   length: 20,
   lowercaseIncluded: true,
   uppercaseIncluded: true,
   numbersIncluded: true,
-  symbolsIncluded: true,
-}
+  symbolsIncluded: true
+)
 ```
 
 ## Author
