@@ -5,3 +5,11 @@
 ## 1.0.1
 
 * change github repo, return a map of password and it's strength
+
+## 1.0.2
+
+* remove plugin_platform_interface
+
+## 1.0.3
+
+* remove plugin_platform_interface

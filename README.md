@@ -21,14 +21,14 @@ flutter pub add flutter_password_generator
 import 'package:flutter_chacha20_poly1305/flutter_chacha20_poly1305.dart';
 
 final _flutterPasswordGeneratorPlugin = FlutterPasswordGenerator(length: 24);
-final key = await _flutterPasswordGeneratorPlugin.generatePassword();
+final pwd = await _flutterPasswordGeneratorPlugin.generatePassword();
 print('Generated password: ${pwd}');
 // Generated password: {password: 8M:a[1>]8oXFCyPF2xa0BrM], strength: strong}
 ```
 
 ## Methods
 
-#### `generatePassword(): <String>`
+#### `generatePassword(): <Map>`
 if no passwordConfig object is passed when init FlutterPasswordGenerator(password_config);, it'll use the default config object:
 
 ```js

@@ -2,10 +2,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_password_generator/flutter_password_generator.dart';
 import 'package:flutter_password_generator/flutter_password_generator_platform_interface.dart';
 import 'package:flutter_password_generator/flutter_password_generator_method_channel.dart';
-import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 class MockFlutterPasswordGeneratorPlatform
-    with MockPlatformInterfaceMixin
     implements FlutterPasswordGeneratorPlatform {
 
   @override
